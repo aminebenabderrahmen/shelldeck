@@ -1,6 +1,6 @@
 # Shelldeck
 
-**Centralized terminal management for VS Code.** Create, name, and organize shell sessions from a dedicated sidebar — just like managing files in an explorer.
+**Terminals belong next to your code, not hidden in a panel.** Shelldeck turns terminal sessions into editor tabs — create, name, and organize them from a sidebar, right alongside your files.
 
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.85%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -10,12 +10,14 @@
 
 ## Why Shelldeck?
 
-VS Code's built-in terminal panel gets messy fast. Tabs pile up, names are generic, and everything disappears when you close the window. Shelldeck fixes this:
+Developers constantly switch between code and terminal — but VS Code keeps them in separate worlds. Your code lives in editor tabs, your terminals hide in a bottom panel. You end up juggling between the two, losing context every time.
 
-- **Named terminals** — Give each session a meaningful name, not "bash (1)", "bash (2)", "bash (3)"
-- **Sidebar overview** — See all your terminals at a glance with live status indicators
-- **Persistent sessions** — Terminal metadata survives restarts. Processes reconnect on demand
-- **Terminals as editor tabs** — Sessions open in the editor area, not the bottom panel
+**Shelldeck brings terminals into the editor.** Terminal sessions open as tabs, right next to your code files. One workspace, one view, everything centralized — code and shell side by side.
+
+- **Terminals as editor tabs** — Shell sessions live next to your code, not buried in a bottom panel. Split, arrange, and switch between code and terminal like any other file
+- **Named sessions** — Give each terminal a real name (`api-server`, `db-migrate`, `tests`) instead of "bash (1)", "bash (2)", "bash (3)"
+- **Sidebar overview** — A dedicated panel to see, organize, and manage all your terminals at a glance with live status indicators
+- **Persistent sessions** — Terminal metadata survives restarts. Processes reconnect on demand — your workspace stays intact
 
 ## Features
 
