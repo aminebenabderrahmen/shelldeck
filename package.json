@@ -4,6 +4,7 @@
   "description": "Centralized terminal management — terminals as editor tabs",
   "version": "0.1.0",
   "publisher": "shelldeck",
+  "icon": "resources/icon.png",
   "engines": {
     "vscode": "^1.85.0"
   },
