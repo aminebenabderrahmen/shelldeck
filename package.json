@@ -1,0 +1,97 @@
+{
+  "name": "shelldeck",
+  "displayName": "Shelldeck",
+  "description": "Centralized terminal management — terminals as editor tabs",
+  "version": "0.1.0",
+  "publisher": "shelldeck",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:shelldeck.terminals"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "shelldeck",
+          "title": "Shelldeck",
+          "icon": "resources/shelldeck.svg"
+        }
+      ]
+    },
+    "views": {
+      "shelldeck": [
+        {
+          "id": "shelldeck.terminals",
+          "name": "Terminals",
+          "type": "webview"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "shelldeck.newTerminal",
+        "title": "Shelldeck: New Terminal",
+        "icon": "$(add)"
+      },
+      {
+        "command": "shelldeck.openTerminal",
+        "title": "Shelldeck: Open Terminal"
+      },
+      {
+        "command": "shelldeck.renameTerminal",
+        "title": "Rename",
+        "icon": "$(edit)"
+      },
+      {
+        "command": "shelldeck.deleteTerminal",
+        "title": "Delete",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "shelldeck.nextTerminal",
+        "title": "Shelldeck: Next Terminal"
+      },
+      {
+        "command": "shelldeck.prevTerminal",
+        "title": "Shelldeck: Previous Terminal"
+      }
+    ],
+    "keybindings": [
+      { "command": "shelldeck.newTerminal", "key": "ctrl+shift+t", "mac": "cmd+shift+t" },
+      { "command": "shelldeck.nextTerminal", "key": "ctrl+shift+down", "mac": "cmd+shift+down" },
+      { "command": "shelldeck.prevTerminal", "key": "ctrl+shift+up", "mac": "cmd+shift+up" },
+      { "command": "shelldeck.renameTerminal", "key": "ctrl+shift+r", "mac": "cmd+shift+r" },
+      { "command": "shelldeck.deleteTerminal", "key": "ctrl+shift+w", "mac": "cmd+shift+w" }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "shelldeck.newTerminal",
+          "when": "view == shelldeck.terminals",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "npm run check-types && node esbuild.js",
+    "check-types": "tsc --noEmit",
+    "watch": "node esbuild.js --watch",
+    "package": "vsce package"
+  },
+  "dependencies": {
+    "node-pty": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.5.0"
+  }
+}
