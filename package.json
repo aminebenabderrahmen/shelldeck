@@ -10,6 +10,22 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "terminal",
+    "shell",
+    "pty",
+    "terminal-manager",
+    "sidebar"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aminebenabderrahmen/shelldeck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aminebenabderrahmen/shelldeck/issues"
+  },
+  "homepage": "https://github.com/aminebenabderrahmen/shelldeck#readme",
   "activationEvents": [
     "onView:shelldeck.terminals"
   ],
